@@ -10,6 +10,8 @@ import UIKit
 
 class DefinitionViewController: UIViewController {
     
+    @IBOutlet weak var birthyearlabel: UILabel!
+    @IBOutlet weak var categorylabel: UILabel!
     @IBOutlet weak var definitionLabel: UILabel!
     
     @IBOutlet weak var emojiLabel: UILabel!
@@ -24,12 +26,18 @@ class DefinitionViewController: UIViewController {
         
         if emoji == "🐼" {
             definitionLabel.text = "This is a fucking panda"
+            categorylabel.text = "Category: Animal"
+            birthyearlabel.text = "BirthYear: 2015"
         }
         if emoji == "⛄️" {
             definitionLabel.text = "Yeah, I am a snowman, So!@@"
+            categorylabel.text = "Category: Myth character"
+            birthyearlabel.text = "BirthYear: 1898"
         }
         if emoji == "🖕" {
             definitionLabel.text = "I love you bae"
+            categorylabel.text = "Category : Middle Finger"
+            birthyearlabel.text = "BirthYear: 0000"
         }
     }
 

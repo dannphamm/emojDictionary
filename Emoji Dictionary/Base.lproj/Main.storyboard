@@ -68,17 +68,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: Fuck" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3u-bI-NCs">
+                                <rect key="frame" x="129" y="434" width="117" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BirthYear: 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yqh-c5-3Ii">
+                                <rect key="frame" x="129.5" y="475" width="116" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="L3u-bI-NCs" firstAttribute="centerX" secondItem="LNY-66-QwK" secondAttribute="centerX" id="0Mb-am-cri"/>
                             <constraint firstItem="t77-0J-5iF" firstAttribute="top" secondItem="GRO-bq-jic" secondAttribute="bottom" constant="40" id="5pj-ew-a61"/>
                             <constraint firstItem="t77-0J-5iF" firstAttribute="centerX" secondItem="LNY-66-QwK" secondAttribute="centerX" id="H49-hZ-UqU"/>
+                            <constraint firstItem="Yqh-c5-3Ii" firstAttribute="top" secondItem="L3u-bI-NCs" secondAttribute="bottom" constant="20" id="I2D-Gd-Kl6"/>
                             <constraint firstItem="xJv-F7-iOS" firstAttribute="top" secondItem="t77-0J-5iF" secondAttribute="bottom" constant="50" id="Xt8-eA-wxb"/>
                             <constraint firstItem="t77-0J-5iF" firstAttribute="centerX" secondItem="LNY-66-QwK" secondAttribute="centerX" id="e8S-Kb-GbT"/>
                             <constraint firstItem="xJv-F7-iOS" firstAttribute="centerX" secondItem="LNY-66-QwK" secondAttribute="centerX" id="r8a-wj-ClR"/>
+                            <constraint firstItem="Yqh-c5-3Ii" firstAttribute="centerX" secondItem="LNY-66-QwK" secondAttribute="centerX" id="wdK-Ek-qmI"/>
+                            <constraint firstItem="L3u-bI-NCs" firstAttribute="top" secondItem="xJv-F7-iOS" secondAttribute="bottom" constant="20" id="y88-lG-HrQ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="birthyearlabel" destination="Yqh-c5-3Ii" id="z0F-KX-fml"/>
+                        <outlet property="categorylabel" destination="L3u-bI-NCs" id="ndH-FC-Q10"/>
                         <outlet property="definitionLabel" destination="xJv-F7-iOS" id="RgP-Dw-1kR"/>
                         <outlet property="emojiLabel" destination="t77-0J-5iF" id="EjQ-3h-n0V"/>
                     </connections>
