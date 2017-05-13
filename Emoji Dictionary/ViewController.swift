@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBOutlet weak var cooltableview: UITableView!
     
-    var emojis = ["🐼","⛄️","🖕"]
+    var emojis : [Emoji] =  []
     
     
     
@@ -22,6 +22,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Do any additional setup after loading the view, typically from a nib.
         cooltableview.dataSource = self
         cooltableview.delegate = self
+        emojis = makeEmojiArray()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,7 +32,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print(indexPath.row)
         let cell = UITableViewCell()
-        cell.textLabel?.text = emojis[indexPath.row]
+        let emoji = emojis[indexPath.row]
+        cell.textLabel?.text = emoji.stringEmoji
         return cell
     }
     
@@ -43,7 +45,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let defDan = segue.destination as! DefinitionViewController
-        defDan.emoji = sender as! String
+        defDan.emoji = sender as! Emoji
         
     }
 
@@ -52,6 +54,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Dispose of any resources that can be recreated.
     }
 
+    func makeEmojiArray () -> [Emoji] {
+        let emoji1 = Emoji()
+        emoji1.stringEmoji = "🐼"
+        emoji1.birthYear = 2016
+        emoji1.category = "Animal"
+        emoji1.definition = "KungFu Panda"
+        
+        let emoji2 = Emoji()
+        emoji2.stringEmoji = "⛄️"
+        emoji2.birthYear = 2017
+        emoji2.category = "Animal"
+        emoji2.definition = "Snowman"
+        
+        let emoji3 = Emoji()
+        emoji3.stringEmoji = "🖕"
+        emoji3.birthYear = 2016
+        emoji3.category = "Other"
+        emoji3.definition = "Middle Finger"
+        
+        return [emoji1, emoji2, emoji3]
+    }
 
 }
 
